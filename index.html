@@ -31,11 +31,15 @@
         <section class="firstSection">
             <div class="leftSection">
                 <div> Hi, my name is <span class="purple">Prateek Bhaisora</span>.</div>
-                <div> I am currently a first year <span class="purple"> M.Tech </span> in <span class="purple">Cyber Security</span> student at <span class="purple">IITD</span>. </div>
+                <div> I am currently a second year <span class="purple"> M.Tech </span> in <span class="purple">Cyber Security</span> student at <span class="purple">IITD</span>. </div>
                 <div> My area of interests lies in domain of: <span id="element"></span> </div>
                 <div class="buttons">
-                    <button class="btn" onclick="showPopup()"> Download Resume </button>
-                    <button class="btn" onclick="showPopup()"> Visit Github </button>
+                    <button class="btn" onclick="redirectTo('resume')"> Download Resume </button>
+                    <button class="btn" onclick="redirectTo('leetcode')"> Leetcode Profile </button>
+                    <button class="btn" onclick="redirectTo('codeforces')"> Codeforces Profile </button>
+                    <button class="btn" onclick="redirectTo('geeksforgeeks')"> GeekforGeeks Profile </button>
+                    <button class="btn" onclick="redirectTo('github')"> GitHub Profile </button>
+                    <button class="btn" onclick="redirectTo('linkedin')"> LinkedIn Profile </button>
                 </div>
             </div>
             <div class="rightSection">
@@ -44,77 +48,54 @@
         </section>
         <hr>
         <section class="secondSection">
-            <span class="text-grey"> What have I done so far? </span>
-            <h1> Past Experiences </h1>
+            <span class="text-grey">What have I done so far?</span>
+            <h1><u>Recent Projects</u></h1>
             <div class="box">
-                <div class="vertical">
-                    <img class="image-top" src="./images/photo.jpeg" alt="">
-                    <div class="vertical-title">
-                        HTML Developer (2010-2012)
-                    </div>
-                    <div class="vertical-desc">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias laudantium ipsum ad omnis.
-                        Voluptatibus ullam quia unde consequuntur recusandae voluptatem vero, eum dolores fuga
-                        aspernatur vel quidem architecto quod voluptas?
-                    </div>
-                </div>
-                <div class="vertical">
-                    <img class="image-top" src="./images/photo.jpeg" alt="">
-                    <div class="vertical-title">
-                        HTML Developer (2010-2012)
-                    </div>
-                    <div class="vertical-desc">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias laudantium ipsum ad omnis.
-                        Voluptatibus ullam quia unde consequuntur recusandae voluptatem vero, eum dolores fuga
-                        aspernatur vel quidem architecto quod voluptas?
-                    </div>
-                </div>
-                <div class="vertical">
-                    <img class="image-top" src="./images/photo.jpeg" alt="">
-                    <div class="vertical-title">
-                        HTML Developer (2010-2012)
-                    </div>
-                    <div class="vertical-desc">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias laudantium ipsum ad omnis.
-                        Voluptatibus ullam quia unde consequuntur recusandae voluptatem vero, eum dolores fuga
-                        aspernatur vel quidem architecto quod voluptas?
-                    </div>
-                </div>
-                <div class="vertical">
-                    <img class="image-top" src="./images/photo.jpeg" alt="">
-                    <div class="vertical-title">
-                        HTML Developer (2010-2012)
-                    </div>
-                    <div class="vertical-desc">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias laudantium ipsum ad omnis.
-                        Voluptatibus ullam quia unde consequuntur recusandae voluptatem vero, eum dolores fuga
-                        aspernatur vel quidem architecto quod voluptas?
-                    </div>
-                </div>
-                <div class="vertical">
-                    <img class="image-top" src="./images/photo.jpeg" alt="">
-                    <div class="vertical-title">
-                        HTML Developer (2010-2012)
-                    </div>
-                    <div class="vertical-desc">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias laudantium ipsum ad omnis.
-                        Voluptatibus ullam quia unde consequuntur recusandae voluptatem vero, eum dolores fuga
-                        aspernatur vel quidem architecto quod voluptas?
-                    </div>
-                </div>
-                <div class="vertical">
-                    <img class="image-top" src="./images/photo.jpeg" alt="">
-                    <div class="vertical-title">
-                        HTML Developer (2010-2012)
-                    </div>
-                    <div class="vertical-desc">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias laudantium ipsum ad omnis.
-                        Voluptatibus ullam quia unde consequuntur recusandae voluptatem vero, eum dolores fuga
-                        aspernatur vel quidem architecto quod voluptas?
-                    </div>
-                </div>
+                <ul class="project-list">
+                    <li class="project-item">
+                        <div class="project-header">
+                            <h2>CAN Bus Arbitration Simulator and DoS attack</h2>
+                            <span class="project-date">(May 2024 - Aug 2024)</span>
+                        </div>
+                        <p>Developed a full-fledged CAN Bus Arbitration Simulator that can generate and replay CAN logs using pygame and Carla. Implemented arbitration logic in OMNeT++ and connected it with Carla over ZMQ via socket programming. Optimized the arbitration latency from 392 µs to 130 µs and performed a DoS attack by injecting adversarial logs.</p>
+                        <a href="#" class="project-link">Read more</a>
+                    </li>
+                    <li class="project-item">
+                        <div class="project-header">
+                            <h2>Multi-DRAM Bank Scalesim</h2>
+                            <span class="project-date">(Mar 2024 - May 2024)</span>
+                        </div>
+                        <p>Revamped a Systolic Array based DNN Accelerator Simulator called ScaleSim by implementing multiple DRAM banks and designing an efficient multi-DRAM Bank mapping scheme.</p>
+                        <a href="#" class="project-link">Read more</a>
+                    </li>
+                    <li class="project-item">
+                        <div class="project-header">
+                            <h2>ML Image Classification and Adversarial Attack</h2>
+                            <span class="project-date">(Apr 2024 - May 2024)</span>
+                        </div>
+                        <p>Implemented an ANN and trained it on MNIST dataset and used FGSM to generate adversarial examples to trick the model into misclassification.</p>
+                        <a href="#" class="project-link">Read more</a>
+                    </li>
+                    <li class="project-item">
+                        <div class="project-header">
+                            <h2>Firewall Monitor and Load Balancer</h2>
+                            <span class="project-date">(Oct 2023 - Nov 2023)</span>
+                        </div>
+                        <p>Implemented a packet monitoring firewall and a Load Balancer, over Ryu SDN, in a custom topology using Mininet.</p>
+                        <a href="#" class="project-link">Read more</a>
+                    </li>
+                    <li class="project-item">
+                        <div class="project-header">
+                            <h2>Cryptanalysis and Cryptographic Attacks</h2>
+                            <span class="project-date">(Aug 2023 - Sept 2023)</span>
+                        </div>
+                        <p>Implemented Meet-in-the-Middle attack, Padding Oracle attack and an attack on CBC using bad IV.</p>
+                        <a href="#" class="project-link">Read more</a>
+                    </li>
+                </ul>
+                <button id="show-more-btn" class="show-more-btn">Show More Projects</button>
             </div>
-        </section>
+        </section>                      
     </main>
     <!-- Modal -->
     <div id="myModal" class="modal">
@@ -123,46 +104,25 @@
             <p class="alert">This functionality will be made available soon!</p>
         </div>
     </div>
-    <footer>
-        <div class="flex">
-            <div class="footer-first"> 
-                Prateek's Developer Portfolio 
-            </div>
-            <div class="footer-second">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Services</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="/">Contact Me</a></li>
-                </ul>
-            </div>
-            <div class="footer-third">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Services</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="/">Contact Me</a></li>
-                </ul>
-            </div>
-            <div class="footer-fourth"> 
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Services</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="/">Contact Me</a></li>
-                </ul>
-            </div>
+    <footer class="footer">
+        <div class="footer-section footer-first">
+        </div>
+        <div class="footer-section footer-links">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="/">Projects</a></li>
+                <li><a href="/">Contact Me</a></li>
+            </ul>
         </div>
         <div class="footer-rights">
-            Copyright &#169; www.prateek.com | All rights reserved
+            <p>Copyright &#169; www.prateekbhaisora.github.io | All rights reserved</p>
         </div>
-    </footer>
+    </footer>    
     <!-- Typed.js Animation Script -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script type="text/javascript" src="typing-animation.js"> </script>
-    <script type="text/javascript" src="coming-soon.js"> </script>
+    <script type="text/javascript" src="script.js"> </script>
 </body>
 </html>
