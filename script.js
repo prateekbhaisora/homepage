@@ -21,12 +21,12 @@ window.onclick = function(event) {
 // Redirection
 function redirectTo(profile) {
     const urls = {
-        resume: 'URL_TO_YOUR_RESUME',
+        resume: 'https://drive.google.com/file/d/1p2Vkq96Ak9QUa6hV8Lb0fLnwXgy_gZNR/view?usp=sharing',
         leetcode: 'https://leetcode.com/u/prateekbhaisora/',
         codeforces: 'https://codeforces.com/profile/prateekbhaisora',
-        geeksforgeeks: 'URL_TO_YOUR_GEEKSFORGEEKS_PROFILE',
+        geeksforgeeks: 'https://www.geeksforgeeks.org/user/prateekbhaisora/',
         github: 'https://github.com/prateekbhaisora',
-        linkedin: 'URL_TO_YOUR_LINKEDIN_PROFILE'
+        linkedin: 'https://www.linkedin.com/in/prateekbhaisora/'
     };
     
     window.open(urls[profile], '_blank');
